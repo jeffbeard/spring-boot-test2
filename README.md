@@ -1,6 +1,6 @@
 # Spring Boot Test Application
 
-This is a simple Spring Boot application that demonstrates a Thymeleaf-based web frontend with Spring Web MVC.
+This is a test Spring Boot application edited with Claude CLI
 
 ## Features
 
