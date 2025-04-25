@@ -26,3 +26,20 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+task run(dependsOn: build) {
+	group = 'application'
+	description = 'Builds and runs the application on port 8080'
+	
+	doLast {
+		def port = 8080
+		def url = "http://localhost:${port}"
+		
+		println "\n\nStarting application on port ${port}..."
+		println "Application will be available at: ${url}\n"
+		
+		exec {
+			commandLine './gradlew', 'bootRun', '--args=--server.port=' + port
+		}
+	}
+}
