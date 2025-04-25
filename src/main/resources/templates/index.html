@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hello Spring MVC</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        .error { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1 th:text="'Hello, ' + ${name} + '!'">Hello, World!</h1>
+    <div th:if="${error}" class="error" th:text="${error}"></div>
+    
+    <form action="/" method="get">
+        <p>Enter your name: <input type="text" name="name" /></p>
+        <p><input type="submit" value="Submit" /></p>
+    </form>
+</body>
+</html>
